@@ -19,6 +19,6 @@
    console.log(this) ==> here this refer to the button;
    });
 
-5 . pure Functions = the functions which accepts an input and gives an same output value as input every times,and they do not change any global variables values;
+5. pure Functions = the functions which accepts an input and gives an same output value as input every times,and they do not change any global variables values;
 
-    impure functions = the functions that does not gives an same output as the input every times and the functions that changes an global variables value in the functions ;
+   impure functions = the functions that does not gives an same output as the input every times and the functions that changes an global variables value in the functions ;
