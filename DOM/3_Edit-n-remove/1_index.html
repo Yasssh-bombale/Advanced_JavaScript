@@ -10,6 +10,7 @@
       <li>JavaScript</li>
     </ul>
     <script>
+      // professional approach;
       function createOptimizedLanguage(langName) {
         const li = document.createElement("li");
         const text = document.createTextNode(langName);
@@ -33,6 +34,9 @@
       const editedLi = document.createElement("li");
       editedLi.appendChild(document.createTextNode("GoLang"));
       secondLang.replaceWith(editedLi);
+      // Remove in DOM:
+      const lastLang = document.querySelector("li:last-child");
+      lastLang.remove();
     </script>
   </body>
 </html>
