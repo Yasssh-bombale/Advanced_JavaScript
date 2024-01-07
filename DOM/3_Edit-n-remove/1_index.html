@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code aur Roy</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>JavaScript</li>
+    </ul>
+    <script>
+      function createOptimizedLanguage(langName) {
+        const li = document.createElement("li");
+        const text = document.createTextNode(langName);
+        li.appendChild(text);
+        document.querySelector(".language").appendChild(li);
+      }
+      createOptimizedLanguage("TypeScript");
+      createOptimizedLanguage("Python");
+      // *******************************************************************************
+      // Normal way:
+      function createNormalLanguage(langName) {
+        const li = document.createElement("li");
+        li.innerHTML = langName;
+        //FIXME: Here by using li.innerHTML we are traversing ,Not an Optimized Approach
+        document.querySelector(".language").appendChild(li);
+      }
+      createNormalLanguage("JAVA");
+
+      // Edit in DOM :
+      const secondLang = document.querySelector("li:nth-child(2)");
+      const editedLi = document.createElement("li");
+      editedLi.appendChild(document.createTextNode("GoLang"));
+      secondLang.replaceWith(editedLi);
+    </script>
+  </body>
+</html>
