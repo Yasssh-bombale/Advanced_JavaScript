@@ -1,3 +1,10 @@
+# preview :-
+
+<img style="border-radius:10px" src="preview.png" height="300px" width="600px">
+
+# script code
+
+```javascript
 const boxes = document.querySelectorAll(".box");
 const body = document.querySelector("body");
 
@@ -17,3 +24,4 @@ boxes.forEach((boxes) => {
     }
   });
 });
+```
