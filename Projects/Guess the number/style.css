@@ -14,7 +14,7 @@ body {
   padding: 30px;
 }
 #container {
-  margin-top: 100px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -24,6 +24,7 @@ body {
   font-family: cursive;
   background-color: darkgrey;
   color: #212121;
+  padding: 50px;
 }
 #sub-container {
   /* border: 1px solid black; */
@@ -51,4 +52,15 @@ form {
   cursor: pointer;
   background-color: #212121;
   color: #fff;
+}
+#newGame {
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #212121;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+}
+.lowORhigh {
+  color: rgb(155, 23, 23);
 }
