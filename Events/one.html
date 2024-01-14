@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evenets</title>
+    <style>
+      img {
+        height: 100px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing image</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      // Interview questions:
+
+      // type, timestamp, defaultPrevented
+      // target, toElement, srcElement, currentTarget,
+      // clientX, clientY, screenX, screenY
+      // altkey, ctrlkey, shiftkey, keyCode
+      // <<----------------------------------------------------------------->>
+
+      // Event Bubbling and Event capturing;
+
+      // --------------------------------------------------------------------->>
+      // Event Bubbling:Goes from inner element to outer element: it's 3rd parameter is by defualt false;
+      document.getElementById("images").addEventListener(
+        "click",
+        (e) => {
+          console.log("click inside the ul");
+        }
+        // false  it is by default false;
+      );
+      document.getElementById("owl").addEventListener("click", (e) => {
+        console.log("clicked owl");
+      });
+
+      //TODO: output:clicked owl click inside the ul
+      // ------------------------------------------------------------------------>>
+
+      // Event capturing:it goes from outer to inner element;and its 3rd parameter is an true;
+
+      /*
+      
+         document.getElementById("images").addEventListener(
+        "click",
+        (e) => {
+          console.log("click inside the ul");
+        },
+        true
+      );
+      document.getElementById("owl").addEventListener(
+        "click",
+        (e) => {
+          console.log("clicked owl");
+        },
+        true
+      );
+      
+      // TODO: Output: click inside the ul and clicked owl
+      */
+
+      // e.preventDefault()  and e.stopPropagation();
+      document.getElementById("google").addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation(); //stopPropagation will stop bubbling of events;
+        console.log("google clicked");
+      });
+    </script>
+  </body>
+</html>
