@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121; color: aliceblue">
+    <h1>Code With Roy</h1>
+    <button id="btn">Stop</button>
+    <script>
+      const changeHeading = () => {
+        document.querySelector("h1").innerHTML = "Code with yasshu";
+      };
+      const intervalInstance = setInterval(changeHeading, 2000);
+
+      document.getElementById("btn").addEventListener(
+        "click",
+        () => {
+          clearInterval(intervalInstance);
+          console.log("setInterval has been stoppped due to clear Interval");
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

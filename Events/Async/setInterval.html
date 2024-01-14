@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SetInterval</title>
+  </head>
+  <body style="background-color: #212121; color: aliceblue">
+    <h1>Hey there ...Code aur roy</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+      document.getElementById("start").addEventListener("click", () => {
+        const intervalInstance = setInterval(() => {
+          console.log("Yasshu", Date.now());
+        }, 2000);
+
+        document.getElementById("stop").addEventListener("click", () => {
+          clearInterval(intervalInstance);
+          console.log("interval has been stopped");
+        });
+      });
+    </script>
+  </body>
+</html>
