@@ -24,4 +24,4 @@
    impure functions = the functions that does not gives an same output as the input every times and the functions that changes an global variables value in the functions ;
 
 6. DOM.
-7. DOM Manipulation
+7. DOM Manipulation.
